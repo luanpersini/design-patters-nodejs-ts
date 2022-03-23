@@ -1,9 +1,7 @@
+.idea
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 node_modules
-dist
-coverage
-data
-.vscode
-.husky
-!src/data
-.env
-env.ts

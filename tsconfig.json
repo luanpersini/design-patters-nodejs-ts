@@ -1,23 +1,8 @@
 {
-  "compilerOptions": {
-    "outDir": "dist",
-    "module": "commonjs",
-    "target": "es2020",
-    "esModuleInterop": true,
-    "sourceMap": true,
-    "rootDir": "src",
-    "baseUrl": "src",
-    "paths": {
-      "@/*": [
-        "*"
-      ]
-    }
-  },
-  "include": [
-    "src"
-, "validation"  ],
-  "typeRoots": [
-    "./node_modules/@types"
-  ],
-  "exclude": []
+    "include": [
+        "src/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
 }
