@@ -8,50 +8,33 @@
  * with this pattern. Just remember that the Subject is also called the
  * Publisher and the Observer is often called the Subscriber and vice versa.
  * Also the verbs "observe", "listen" or "track" usually mean the same thing.
- *
- * RU: Паттерн Наблюдатель
- *
- * Назначение: Создаёт механизм подписки, позволяющий одним объектам следить и
- * реагировать на события, происходящие в других объектах.
- *
- * Обратите внимание, что существует множество различных терминов с похожими
- * значениями, связанных с этим паттерном. Просто помните, что Субъекта также
- * называют Издателем, а Наблюдателя часто называют Подписчиком и наоборот.
- * Также глаголы «наблюдать», «слушать» или «отслеживать» обычно означают одно и
- * то же.
  */
 
 /**
  * EN: The Subject interface declares a set of methods for managing subscribers.
- *
- * RU: Интферфейс издателя объявляет набор методов для управлениями
- * подписчиками.
+ * 
  */
 interface Subject {
     // EN: Attach an observer to the subject.
-    //
-    // RU: Присоединяет наблюдателя к издателю.
+      
     attach(observer: Observer): void;
 
     // EN: Detach an observer from the subject.
-    //
-    // RU: Отсоединяет наблюдателя от издателя.
+   
     detach(observer: Observer): void;
 
-    // EN: Notify all observers about an event.
-    //
-    // RU: Уведомляет всех наблюдателей о событии.
+    // EN: Notify all observers about an event.    
     notify(): void;
 }
 
 /**
  * EN: The Subject owns some important state and notifies observers when the
- * state changes.
- *
- * RU: Издатель владеет некоторым важным состоянием и оповещает наблюдателей о
- * его изменениях.
+ * state changes. 
  */
 class ConcreteSubject implements Subject {
+    request(): void {
+        throw new Error('Method not implemented.');
+    }
     /**
      * EN: @type {number} For the sake of simplicity, the Subject's state,
      * essential to all subscribers, is stored in this variable.
